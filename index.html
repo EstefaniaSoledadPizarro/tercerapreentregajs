@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Cambio de Divisas</title>
+</head>
+<body>
+    <header>
+        <h1>Conversor de monedas extranjeras</h1>
+    </header>
+    <main>
+        <form>
+            <label for="cantidad">Cantidad a Cambiar:</label>
+            <input type="number" id="cantidad" name="cantidad" required>
+            <label for="moneda-origen">Moneda de Origen:</label>
+            <select id="moneda-origen" name="moneda-origen" required>
+                <option value="usd">Dólares (USD)</option>
+                <option value="eur">Euros (EUR)</option>
+                <option value="real">Reales (R)</option>
+                <option value="chilenos">Pesos chilenos (CH)</option>
+                <option value="libras">Libras esterlinas (GBP)</option>
+            </select>
+            <label for="moneda-destino">Moneda de Destino:</label>
+            <select id="moneda-destino" name="moneda-destino" required>
+                <option value="usd">Dólares (USD)</option>
+                <option value="eur">Euros (EUR)</option>
+                <option value="real">Reales (R)</option>
+                <option value="chilenos">Pesos chilenos (CH)</option>
+                <option value="libras">Libras esterlinas (GBP)</option>
+            </select>
+            <button type="submit">Calcular</button>
+            <button type="button" id="add-carrito">Agregar al Carrito</button>
+        </form>
+        <div id="resultado">Tu cambio es: </div>
+        <div id="carrito">
+            <h2>Tus operaciones de cambio:</h2>
+            <ul id="lista-compras"> </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 - EstefaniaPizarro </p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
