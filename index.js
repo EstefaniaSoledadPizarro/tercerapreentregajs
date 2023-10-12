@@ -7,9 +7,9 @@ let resultadoDiv = document.getElementById('resultado');
 const tasasDeCambio = {
     usd: 1.00,
     eur: 1.15,
-    real: 0.19,
-    chilenos: 0.0013,
-    libras: 1.36,
+    real: 0.70,
+    chilenos: 0.0018,
+    libras: 1.25,
 };
 
 form.addEventListener('submit', function (e) {
@@ -20,7 +20,7 @@ form.addEventListener('submit', function (e) {
     let monedaDestino = monedaDestinoSelect.value;
     let tasaOrigen = tasasDeCambio[monedaOrigen];
     let tasaDestino = tasasDeCambio[monedaDestino];
-    let cambio = cantidad * (tasaDestino / tasaOrigen);
+    let cambio = cantidad * (tasaOrigen / tasaDestino);
     resultadoDiv.textContent = 'Tu cambio es: ' + cambio.toFixed(1) + ' ' + monedaDestino;
 });
 
@@ -62,11 +62,11 @@ document.getElementById("add-carrito").addEventListener("click", () => {
     if (monedaOrigen === "eur" && monedaDestino === "usd") {
         total = cantidad * 1.15;
     } else if (monedaOrigen === "real" && monedaDestino === "usd") {
-        total = cantidad * 0.19;
+        total = cantidad * 0.70;
     } else if (monedaOrigen === "chilenos" && monedaDestino === "usd") {
-        total = cantidad * 0.0013;
+        total = cantidad * 0.0018;
     } else if (monedaOrigen === "libras" && monedaDestino === "usd") {
-        total = cantidad * 1.36;
+        total = cantidad * 1.25;
     }
 
     carrito.push({ total });
