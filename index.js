@@ -43,14 +43,14 @@ botonCarrito.onclick = function () {
 const listaCompras = document.getElementById("lista-compras");
 const resultadoFinal = document.getElementById("resultado-final");
 
-const carrito = [];
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 function actualizarTotal() {
     let total = 0;
     carrito.forEach(item => {
         total += item.total;
     });
-    resultadoFinal.textContent = "Total: " + total.toFixed(2) + " USD";
+    resultadoFinal.textContent = "Total: " + total.toFixed(1) + " USD";
 }
 
 document.getElementById("add-carrito").addEventListener("click", () => {
@@ -70,17 +70,18 @@ document.getElementById("add-carrito").addEventListener("click", () => {
     }
 
     carrito.push({ total });
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 
     const listItem = document.createElement("li");
     listItem.textContent = `${cantidad} ${monedaOrigen} a USD: ${total.toFixed(1)}`;
     listaCompras.appendChild(listItem);
-
     actualizarTotal();
 });
 
 document.getElementById("vaciarCarrito").addEventListener("click", () => {
     carrito.length = 0;
+    localStorage.removeItem("carrito");
     listaCompras.innerHTML = "";
     resultadoFinal.textContent = "Total:";
 });
-
+actualizarTotal();
