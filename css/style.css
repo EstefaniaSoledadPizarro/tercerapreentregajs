@@ -1,3 +1,8 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: rgb(56, 56, 56);
@@ -14,13 +19,26 @@ h1 {
     color: rgb(76, 76, 231);
 }
 .logo {
-    width: 200px;
-    margin-left:10px;
+    width: 150px;
+    margin:10px;
 }
+.prestamos{
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;    
+}
+.nav-item{
+    list-style-type: none;
+    margin-left: 80px;
+}
+
 main {
     max-width: 700px;
     margin: 0 auto;
     padding: 20px;
+}
+h2 {
+text-align: center;
 }
 form {
     background-color: rgb(68, 68, 68);
@@ -79,9 +97,11 @@ a:hover {
     padding: 20px;
     text-align: center;
 }
-h2 {
+h3 {
     color: rgb(190, 190, 219);
+    margin: 10px;
 }
 #lista-compras{
     color: rgb(255, 255, 255);
+    margin: 5px;
 }

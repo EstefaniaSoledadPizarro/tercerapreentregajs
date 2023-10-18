@@ -12,8 +12,16 @@
     <header>
         <h1>Conversor de monedas extranjeras</h1>
         <img class="logo" id="arriba" src="./Resources/exchange.jpg" alt="exchange">
+        <div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="prestamos" href="./pages/prestamos.html">Prestamos</a>
+                </li>
+            </ul>
+        </div>
     </header>
     <main>
+        <h2>Calculadora de divisas</h2>
         <form>
             <label for="cantidad">Cantidad a Cambiar:</label>
             <input type="number" id="cantidad" name="cantidad" required>
@@ -28,14 +36,14 @@
             <select id="moneda-destino" name="moneda-destino" required>
                 <option value="usd">Dólares (USD)</option>
             </select>
-            <button type="submit">Calcular</button>
+            <button type="submit" id="calcularButton">Calcular</button>
         </form>
         <form>
             <div id="resultado">El valor es: </div>
             <button type="button" id="add-carrito">Agregar operacion al Carrito</button>
         </form>
         <div id="carrito">
-            <h2>Tu lista de operaciones de cambio:</h2>
+            <h3>Tu lista de operaciones de cambio:</h3>
             <ul id="lista-compras"> </ul>
             <h3 id="resultado-final">Total:</h3>
             <button id="vaciarCarrito">Vaciar Carrito</button>
@@ -44,6 +52,7 @@
     <footer>
         <p>&copy; 2023 - EstefaniaPizarro </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="index.js"></script>
 </body>
 
