@@ -105,3 +105,17 @@ h3 {
     color: rgb(255, 255, 255);
     margin: 5px;
 }
+h4{
+    text-align: center;
+}
+#map {
+    margin: auto;
+	height: 300px;
+	width: 50vw;
+}
+.mapa {
+  color:  rgb(255, 255, 255);
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}

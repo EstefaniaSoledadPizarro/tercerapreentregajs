@@ -92,3 +92,4 @@ form.addEventListener('submit', function (e) {
         resultadoFinal.textContent = "Total:";
     });
     actualizarTotal();
+    
